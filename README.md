@@ -12,7 +12,7 @@ The backend server will start running on http://localhost:8080.
 
 Configuration
 If you need to change the database configuration, you can do so in the application.properties file located in the src/main/resources directory. For H2 database, the default configuration might look like this:
-# Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+# Spring DATASOURCE
 spring.datasource.url=jdbc:h2:mem:testdb
 spring.datasource.driverClassName=org.h2.Driver
 spring.datasource.username=sa
