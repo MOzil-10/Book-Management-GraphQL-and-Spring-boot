@@ -15,6 +15,15 @@ import java.io.IOException;
 @Component
 public class CorsFilter implements Filter {
 
+    /**
+     * Filter method to intercept HTTP requests and responses for CORS handling.
+     *
+     * @param request  the servlet request
+     * @param response the servlet response
+     * @param chain    the filter chain
+     * @throws IOException      if an I/O error occurs during the execution of the filter
+     * @throws ServletException if a servlet-specific error occurs during the execution of the filter
+     */
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {

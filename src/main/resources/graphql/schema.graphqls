@@ -13,7 +13,7 @@ input BookDto {
 
 type Query {
     getAllBooks: [Book]
-    getBookById(bookId:ID!,title:String, author:String,description:String):Book
+    getBookById(bookId:ID!):Book
 }
 
 type Mutation {

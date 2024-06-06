@@ -9,6 +9,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class CorsConfig implements WebMvcConfigurer {
 
+    /**
+     * Register a CORS filter for specific URL patterns.
+     *
+     * @return FilterRegistrationBean instance for CORS filter
+     */
     @Bean
     public FilterRegistrationBean<CorsFilter> corsFilterRegistrationBean() {
         FilterRegistrationBean<CorsFilter> registrationBean = new FilterRegistrationBean<>();
@@ -17,6 +22,11 @@ public class CorsConfig implements WebMvcConfigurer {
         return registrationBean;
     }
 
+    /**
+     * Configure CORS mappings for the application.
+     *
+     * @return WebMvcConfigurer instance for CORS configuration
+     */
     @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
