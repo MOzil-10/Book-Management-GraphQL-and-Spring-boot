@@ -9,15 +9,16 @@ import org.springframework.stereotype.Component;
 
 @RequiredArgsConstructor
 @Component
+
 public class MutationResolver implements GraphQLMutationResolver {
     private final BookService bookService;
 
-    public Book addNewBook(BookDto bookInput) {
-        return bookService.addBook(bookInput);
+    public Book addNewBook(BookDto bookDto) {
+        return bookService.addBook(bookDto);
     }
 
-    public Book editBook(Long bookId, BookDto bookInput) {
-        return bookService.updateBook(bookInput, bookId);
+    public Book editBook(Long bookId, BookDto bookDto) {
+        return bookService.updateBook(bookDto, bookId);
     }
 
     public Book deleteBook(Long bookId) {
