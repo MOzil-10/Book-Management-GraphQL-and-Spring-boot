@@ -8,7 +8,7 @@ Java Development Kit (JDK) 11 or later
 Apache Maven
 H2 Database (optional, if you are using another database, make sure to update the configuration accordingly)
 
-The backend server will start running on http://localhost:8080.
+The backend server will start running on http://localhost:8081.
 
 Configuration
 If you need to change the database configuration, you can do so in the application.properties file located in the src/main/resources directory. For H2 database, the default configuration might look like this:
