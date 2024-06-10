@@ -8,7 +8,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 /**
- * Resolver class for GraphQL mutations related to Book entity.
+ * Resolver class for GraphQL mutations related to the Book entity.
+ * This class handles adding, editing, and deleting books.
  */
 @RequiredArgsConstructor
 @Component
@@ -17,31 +18,31 @@ public class MutationResolver implements GraphQLMutationResolver {
     private final BookService bookService;
 
     /**
-     * Adds a new book.
+     * Adds a new book to the system.
      *
-     * @param bookDto data for the new book
-     * @return the newly added Book object
+     * @param bookDto The data transfer object containing information about the book to be added.
+     * @return The newly added Book object.
      */
     public Book addNewBook(BookDto bookDto) {
         return bookService.addBook(bookDto);
     }
 
     /**
-     * Edits an existing book.
+     * Edits an existing book in the system.
      *
-     * @param bookId  the ID of the book to edit
-     * @param bookDto data for the edited book
-     * @return the edited Book object
+     * @param bookId The ID of the book to be edited.
+     * @param bookDto The data transfer object containing updated information about the book.
+     * @return The updated Book object.
      */
     public Book editBook(Long bookId, BookDto bookDto) {
         return bookService.updateBook(bookDto, bookId);
     }
 
     /**
-     * Deletes a book.
+     * Deletes a book from the system.
      *
-     * @param bookId the ID of the book to delete
-     * @return the deleted Book object
+     * @param bookId The ID of the book to be deleted.
+     * @return The deleted Book object.
      */
     public Book deleteBook(Long bookId) {
         return bookService.deleteBook(bookId);
