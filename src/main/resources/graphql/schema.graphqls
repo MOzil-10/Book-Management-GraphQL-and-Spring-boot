@@ -1,24 +1,23 @@
 type Book {
-    id:ID!
-    title:String
-    author:String
-    description:String
+    id: ID!
+    title: String
+    author: String
+    description: String
 }
 
 input BookDto {
-    title:String
-    author:String
-    description:String
+    title: String
+    author: String
+    description: String
 }
 
 type Query {
     getAllBooks: [Book]
-    getBookById(bookId:ID!):Book
+    getBookById(bookId: ID!): Book
 }
 
 type Mutation {
-    addNewBook(bookInput:BookDto):Book
+    addNewBook(bookInput: BookDto): Book
     editBook(bookId: ID!, bookInput: BookDto): Book
-    deleteBook(bookId:ID!): Book
-
+    deleteBook(bookId: ID!): Book
 }
